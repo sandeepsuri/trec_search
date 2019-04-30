@@ -100,10 +100,10 @@ class SANDEEP:
 			mag_document = sum(ranked_words_dict.values())
 			norm = 1 - self.b + self.b*(mag_document/(self.average_of_all_docs + 1))
 
-			# Gives 0.2935 and 0.2875 scores
+			# PLN: Gives 0.2935 and 0.2875 scores
 			# score += tf_idf * ((1 + math.log(1 + tf))/norm) * idf
 
-			# 0.3075 and 0.2997
+			# BM25: 0.3075 and 0.2997
 			score += tf_idf * ( ((self.k + 1) * tf) / (tf + self.k*norm + 1) )
 
 		tup = (query, document_id, score)
