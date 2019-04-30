@@ -39,14 +39,6 @@ if algorithm == 'SANDEEP':
     print("No of documents" + str(len(document_structure)))
     logic_instance = SANDEEP(query_structure, document_structure)
 
-elif algorithm == 'SANDEEP_PREC':
-    logic_instance = None
-    read_files = readFiles(query_cbor, paragraphs_cbor, passages_extract)
-    query_structure = read_files.get_queries()
-    document_structure = read_files.get_paragraphs_from_cbor()
-    print("No of queries" + str(len(query_structure)))
-    print("No of documents" + str(len(document_structure)))
-    logic_instance = SANDEEP_PREC(query_structure, document_structure)
 
 elif algorithm == 'SANDEEP_BM':
     logic_instance = None
